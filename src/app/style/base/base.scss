@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  box-sizing: border-box;
+  background-color: var(--color-grey-dark-4);
+  color: var(--color-white);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 0;
+}

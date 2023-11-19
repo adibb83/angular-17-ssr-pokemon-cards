@@ -1,0 +1,50 @@
+:root {
+  // COLORS
+  --color-white: #ffffff; // plain white
+  --color-black: #000000;
+
+  --color-grey-dark-1: #29333f;
+  --color-grey-dark-2: #4c5e75;
+  --color-grey-dark-3: #3f4e60;
+  --color-grey-dark-4: #171c23;
+
+  --color-grey-light-1: #e0e1e3;
+  --color-grey-light-1-rgba: 224, 225, 227;
+
+  --color-grey-light-2: #92a2b1;
+  --color-grey-light-2-rgba: 146, 162, 177;
+
+  --color-grey-light-3: #d8e7f6;
+  --color-grey-light-4: #f3f3f3;
+
+  --color-red-1: #d80b15;
+  --color-red-2: #ef1616;
+  --color-red-3: #75171c;
+  --color-red-4: #ff4081;
+
+  --color-yellow-dark-1: #d8c40b;
+  --color-yellow-light-1: #d8d80b;
+  --color-yellow-light-2: #fffdbb;
+  --color-orange-light-1: #d88f0b;
+  --color-blue-light-1: #1675ef;
+  --color-blue-light-2: #6495ed;
+
+  // FONT SIZE
+  --font-size-xxs: 1rem;
+  --font-size-xs: 1.2rem;
+  --font-size-s: 1.4rem;
+  --font-size-default: 1.6rem;
+  --font-size-md: 1.8rem;
+  --font-size-lg: 2rem;
+  --font-size-xl: 2.5rem;
+  --font-size-xxl: 3rem;
+
+  // FONT WEIGHT
+  --font-weight-regular: normal;
+  --font-weight-bold: bold;
+
+  // CONSTS
+  --sidebar-width: 10.369rem;
+  --container-gutter: 1rem;
+  --border-radius: 5px;
+}

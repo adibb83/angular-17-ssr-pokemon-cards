@@ -1,0 +1,19 @@
+// Another option is to leave the design of each component within its specific file.
+// But in this way the design is more accessible to the rest of the components or
+// if we want to use it in an external project.
+
+@import "base/mat-theme";
+@import "abstracts/mixins";
+@import "abstracts/variables";
+
+@import "base/base";
+@import "base/typography";
+
+@import "components/header";
+@import "components/sidenav";
+@import "pages/home";
+@import "components/pok-list";
+@import "components/card";
+
+@import "material/badge";
+@import "material/sidenav.scss";

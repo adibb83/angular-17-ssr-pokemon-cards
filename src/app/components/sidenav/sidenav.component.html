@@ -1,0 +1,20 @@
+<mat-sidenav-container class="sidenav__container">
+  <mat-sidenav #sidenav mode="over" [(opened)]="opened" class="sidenav__menu">
+    <mat-list role="list" class="sidenav__list">
+      <mat-list-item role="listitem" [routerLink]="'/home'" [routerLinkActive]="'sidenav__activeLink'">Home
+      </mat-list-item>
+      <mat-list-item role="listitem" matBadge="{{(pokemonsOnCart$| async)?.length || 0}}" matBadgeSize="medium"
+        matBadgeOverlap="true" [matBadgeHidden]="(pokemonsOnCart$| async) === null" [routerLink]="'/cart'"
+        [routerLinkActive]="'sidenav__activeLink'">Cart
+      </mat-list-item>
+      <mat-list-item role="listitem" *ngIf="(isLoggedIn | async) === true" href="#" (click)="logout()">Logout
+      </mat-list-item>
+      <mat-list-item role="listitem" *ngIf="(isLoggedIn | async) === false" href="#" (click)="login()">Login
+      </mat-list-item>
+    </mat-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet class="app-surface"></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

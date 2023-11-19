@@ -1,0 +1,7 @@
+<div class="pok-list__container">
+  @for (pokemon of pokemons$|async; track pokemon.id) {
+    <app-pok-card  [enableAnimation]="enableAnimation" [cardData]="pokemon"
+    (updateCart)="updateCard()"></app-pok-card>
+  }
+</div>
+

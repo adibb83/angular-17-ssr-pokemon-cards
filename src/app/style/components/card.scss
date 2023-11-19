@@ -1,0 +1,62 @@
+@import "../../style/abstracts/mixins";
+
+.card {
+  position: relative;
+  width: 12rem;
+  height: 15rem;
+  background: var(--color-black);
+  @include flex-row(center, center);
+  color: var(--color-white);
+  margin: 1rem;
+  background-image: linear-gradient(
+    35deg,
+    var(--color-orange-light-1),
+    var(--color-blue-light-1)
+  );
+  border-radius: 1rem;
+  border: solid 1px #c0c0c0;
+  box-shadow: rgba(192, 192, 192, 0.25) 0px 6px 12px -2px,
+    rgba(192, 192, 192, 0.3) 0px 3px 7px -3px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+
+  &__img-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    @include flex-row(center, center);
+    text-align: center;
+
+    img {
+      width: 8rem;
+      height: 8rem;
+      object-fit: contain;
+    }
+
+    h2 {
+      margin: 10px 0 0;
+      padding: 0;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+  }
+
+  &__add-button {
+    position: absolute !important;
+    top: 5px;
+    right: 5px;
+    font-size: 1rem;
+  }
+}

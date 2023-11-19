@@ -1,0 +1,55 @@
+@import '../abstracts/variables';
+@import '../base/breakpoints';
+
+.header {
+  &__container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    z-index: 999;
+  }
+
+  &__route-container {
+    display: flex;
+    flex-grow: 1;
+  }
+
+  &__logo {
+    max-height: 3.5rem;
+    margin-right: 2rem;
+  }
+
+  &__item {
+    color: var(--color-white);
+    cursor: pointer;
+    padding: 1rem;
+
+    &:hover {
+      color: var(--color-blue-light-2);
+    }
+  }
+
+  &__activeLink {
+    color: var(--color-black);
+  }
+
+  &__spacer {
+    flex: 1 1 auto;
+  }
+
+  &__toggle {
+    display: none !important;
+  }
+}
+
+@include bp-medium-small {
+  .header {
+    &__route-container {
+      display: none;
+    }
+
+    &__toggle {
+      display: block !important;
+    }
+  }
+}

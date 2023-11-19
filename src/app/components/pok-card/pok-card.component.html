@@ -1,0 +1,16 @@
+
+<div class="card"
+*ngIf="showCard"
+[@inOutAnimation]>
+  <div class="card__img-box">
+    <div>
+    <img [src]="cardData.imgUrl" alt="{{cardData.name}}">
+    <h2>{{cardData.name| titlecase}}</h2>
+    <h3>POW: {{cardData.power}}</h3>
+      </div>
+  </div>
+  <button class="card__add-button" mat-mini-fab color="primary" (click)="update()">
+    <mat-icon>{{cardData.isOnCart ? 'remove' : 'add'}}</mat-icon>
+  </button>
+</div>
+

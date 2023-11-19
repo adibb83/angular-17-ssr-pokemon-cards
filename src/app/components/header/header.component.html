@@ -1,0 +1,23 @@
+<mat-toolbar class="header__container" color="accent">
+  <img class="header__logo" [src]="'assets/logo/pokemon_logo.png'" alt="">
+  <span class="header__spacer"></span>
+  <div class="header__route-container">
+    <span class="header__item" [routerLink]="'/home'" [routerLinkActive]="'header__activeLink'">Home</span>
+    <!--
+    Another option might be better to subscribe for our Pokemon list once
+    in the template and display only the amount of Pokemon on the cart without
+    registering twice like here.
+  -->
+    <span class="header__item" matBadge="{{(pokemonsOnCart$| async)?.length || 0}}" matBadgeSize="medium"
+      matBadgeOverlap="true" [matBadgeHidden]="(pokemonsOnCart$| async) === null" [routerLink]="'/cart'"
+      [routerLinkActive]="'header__activeLink'">Cart</span>
+    <span class="header__spacer"></span>
+    <span class="header__item" *ngIf="(isLoggedIn | async) === true" href="#" (click)="logout()">Logout
+    </span>
+    <span class="header__item" *ngIf="(isLoggedIn | async) === false" href="#" (click)="login()">Login
+    </span>
+  </div>
+  <button class="header__toggle" mat-icon-button (click)="toggleSidenav.emit()">
+    <mat-icon>menu</mat-icon>
+  </button>
+</mat-toolbar>

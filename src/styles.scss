@@ -1,1 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
+
+@use '@angular/material' as mat;
+@include mat.core();
+@import "app/style/base/mat-theme.scss";
+
+$my-custom-typography-config: mat.define-typography-config(
+  $headline-1: mat.define-typography-level(112px, 112px, 300, $letter-spacing: -0.05em, $font-family: $heading-font-family),
+  $headline-2: mat.define-typography-level(56px, 56px, 400, $letter-spacing: -0.02em, $font-family: $heading-font-family),
+  $headline-3: mat.define-typography-level(45px, 48px, 400, $letter-spacing: -0.005em, $font-family: $heading-font-family),
+  $headline-4: mat.define-typography-level(34px, 40px, 400, $font-family: $heading-font-family),
+  $headline-5: mat.define-typography-level(24px, 32px, 400, $font-family: $heading-font-family),
+  $subtitle-2: mat.define-typography-level(18px, 28px, 400, $font-family: $body-font-family),
+  $subtitle-1: mat.define-typography-level(17px, 24px, 400, $font-family: $body-font-family),
+  $body-2: mat.define-typography-level(16px, 24px, 500, $font-family: $body-font-family),
+  $body-1: mat.define-typography-level(16px, 20px, 400, $font-family: $body-font-family),
+  $caption: mat.define-typography-level(14px, 20px, 400, $font-family: $body-font-family),
+  $button: mat.define-typography-level(16px, 14px, 500, $font-family: $body-font-family),
+);
+
+$dark-primary: mat.define-palette(mat.$blue-palette, 500, 100, 900);
+$dark-accent: mat.define-palette(mat.$purple-palette, A700, A200, A400);
+$dark-warn: mat.define-palette(mat.$red-palette);
+$dark-theme: mat.define-dark-theme((
+  color:(
+  primary:$dark-primary,
+  accent:$dark-accent,
+  warn:$dark-warn),
+  typography: $my-custom-typography-config,
+  ));
+
+@include mat.all-component-themes($dark-theme);
+@import "../src/app/style/main.scss";
